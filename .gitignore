@@ -1,0 +1,6 @@
+out/
+output/
+src/boot/
+docs/
+deps/
+deps_test/

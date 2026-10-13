@@ -10,7 +10,7 @@ const ROMHeader rom_header = {
     "SEGA MEGA DRIVE ",
 #endif
     "(C)SGDK 2026    ",
-    "SAMPLE PROGRAM                                  ",
+    "SGDK                                            ",
     "SAMPLE PROGRAM                                  ",
     "GM 00000000-00",
     0x000,
