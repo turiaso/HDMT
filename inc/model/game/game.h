@@ -8,6 +8,7 @@ typedef struct Game {
     u32 dt;
     u16 nextScreen;
     u16 tileIndex;
+    void *ctx;
 } Game;
 
 Game *GAME_getInstance();

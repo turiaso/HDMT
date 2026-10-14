@@ -7,4 +7,5 @@ inline void GAME_init() {
     game.dt = 0;
     game.nextScreen = SCREEN_SERVICE_INITIAL_SCREEN;
     game.tileIndex = TILE_USER_INDEX;
+    game.ctx = NULL;
 }
