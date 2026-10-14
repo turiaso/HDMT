@@ -1,8 +1,9 @@
 #ifndef DEBUG_H
 #define DEBUG_H
-/**
- * UTILS
- */
+
+#ifdef DEBUG
+
+#include "utils/logs/logging.h"
 
 #define HALT(fmt, ...)                                                                                                                               \
     do {                                                                                                                                             \
@@ -32,4 +33,11 @@
         BREAKPOINT(fmt, __VA_ARGS__);                                                                                                                \
     }
 
+    
+#else
+    #define HALT(fmt, ...)
+    #define HALT_IF(condition, fmt, ...) 
+    #define BREAKPOINT(fmt, ...)
+    #define BREAKPOINT_IF(condition, fmt, ...)
+#endif
 #endif /* DEBUG_H */

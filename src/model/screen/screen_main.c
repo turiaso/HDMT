@@ -6,6 +6,7 @@
 void SCREEN_MAIN_init() {
     PAL_setPalette(PAL0, palette_grey, DMA);
     LOG_TRACE("Initializing Screen...");
+    BREAKPOINT("%s","Screen initialization complete.");
     LOG_INFO("Initialized Screen.");
 }
 
