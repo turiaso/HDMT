@@ -8,6 +8,7 @@ void SCREEN_MAIN_init() {
     LOG_TRACE("Initializing Screen...");
     BREAKPOINT("%s","Screen initialization complete.");
     LOG_INFO("Initialized Screen.");
+    VDP_drawText("Main Screen", 10, 10);
 }
 
 void SCREEN_MAIN_exit() {
@@ -19,7 +20,13 @@ void SCREEN_MAIN_update() {
 
 void SCREEN_MAIN_readJoy() {}
 
-void SCREEN_MAIN_onJoyEvent(u16 joy, u16 changed, u16 state) {}
+void SCREEN_MAIN_onJoyEvent(u16 joy, u16 changed, u16 state) {
+    if (joy != JOY_1)return;
+    if (state) return;
+    if(changed & BUTTON_START) {
+        GAME_getInstance()->nextScreen = SCREEN_COMPANY;
+    }
+}
 
 void SCREEN_MAIN_hInt() {}
 void SCREEN_MAIN_vInt() {}
