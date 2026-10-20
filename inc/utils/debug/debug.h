@@ -3,6 +3,7 @@
 
 #ifdef DEBUG
 
+#include "conf/debug_conf.h"
 #include "utils/logs/logging.h"
 
 #define HALT(fmt, ...)                                                                                                                               \
@@ -22,9 +23,9 @@
     do {                                                                                                                                             \
         /*TEXT_DRAW_F(fmt, 0, 0, TEXT_ALIGN_L, __VA_ARGS__);*/                                                                                       \
         LOG_INFO(fmt, __VA_ARGS__);                                                                                                                  \
-        while (!(JOY_readJoypad(JOY_1) & BUTTON_START))                                                                                              \
+        while (!(JOY_readJoypad(JOY_1) & DEBUG_BUTTON_CONTINUE))                                                                                              \
             SYS_doVBlankProcess();                                                                                                                   \
-        while (JOY_readJoypad(JOY_1) & BUTTON_START)                                                                                                 \
+        while (JOY_readJoypad(JOY_1) & DEBUG_BUTTON_CONTINUE)                                                                                                 \
             SYS_doVBlankProcess();                                                                                                                   \
     } while (0)
 
