@@ -3,6 +3,7 @@
 
 #include <conf/screen_conf.h>
 #include <conf/logging_conf.h>
+#include <conf/debug_conf.h>
 #include <utils/debug/debug.h>
 #include <utils/logs/logging.h>
 

@@ -9,11 +9,6 @@
 #include <utils/texts/texts.h>
 */
 
-/// Lista de pantallas disponibles en la aplicación
-#define SCREEN_MACRO_LIST                                                                                                                              \
-    X_MACRO(SCREEN_MAIN)                                                                                                                            \
-   
-
 /// Tiempo de bloqueo inicial para evitar efectos no deseados al pulsar botones
 #define SCREEN_INITIAL_DELAY 300U
 
