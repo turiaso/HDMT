@@ -1,6 +1,13 @@
+# Salidas de SGDK
+*.o
+*.elf
+*.bin
+*.map
+*.sym
+*.lst
 out/
-output/
-src/boot/
-docs/
-deps/
-deps_test/
+build/
+
+# Temporales del sistema/editor
+.DS_Store
+Thumbs.db
